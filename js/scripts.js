@@ -52,3 +52,15 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+
+var i = 0;
+var txt = 'print("Hello World!")';
+var speed = 50;
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("masthead-subheading").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
